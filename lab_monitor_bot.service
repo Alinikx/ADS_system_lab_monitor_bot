@@ -1,0 +1,15 @@
+[Unit]
+Description=ADS System & Home Lab Monitor Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=xxx
+WorkingDirectory=/home/xxx/ADS_system_lab_monitor_bot
+EnvironmentFile=/home/xxx/ADS_system_lab_monitor_bot/.env
+ExecStart=/home/xxx/ADS_system_lab_monitor_bot/venv/bin/python /home/xxx/ADS_system_lab_monitor_bot/ADS_system_lab_monitor_bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
